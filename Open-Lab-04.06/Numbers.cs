@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Open_Lab_04._06
 {
@@ -6,7 +7,11 @@ namespace Open_Lab_04._06
     {
         public int[] NoOdds(int[] numbers)
         {
-            throw new NotImplementedException();
+            var lis = new List<int> { };
+            foreach (var element in numbers)
+                if (element % 2 == 0)
+                    lis.Add(element);
+            return lis.ToArray();
         }
     }
 }
